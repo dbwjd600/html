@@ -1,0 +1,79 @@
+/* .ex2_1 */
+
+.ex2_1{
+    width: 687px;
+    position: relative;
+}
+.ex2_1 > p > img{width: 100%;}
+.ex2_1 > div{
+    position: absolute;
+    left: calc(50% - 200px); bottom: calc(50% - 200px);
+    /* 다른방법1 - left: 20%; right: 20%; top: 20%; bottom: 20%; */
+    /* 다른방법2 - transform: translate(-50%,-50%); */
+    width: 400px; 
+    border: 1px solid #000;
+    /* background-color: white;
+    opacity: 70%; */
+    background-color: rgba(255,255,255,0.7);
+    padding: 130px 0;
+    text-align: center;
+    font-size: 36px;
+    white-space: pre-line;
+    /* box-sizing:border-box; */
+}
+/* 강사님 ★암기
+.ex2_1 > div
+{   
+    position:absolute; left: 50%; top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 400px; height: 400px;
+    background-color: rgba(255,255,255,0.7);
+[text]
+    color: #fff; font-size: 2rem;
+    text-align: center;
+    padding-top: 16%;
+    box-sizing: border-box;
+    -----------------------------
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+*/
+.ex2_1:hover > div{
+    width: 100%; height: 100%;
+    transform: .5s;
+}
+/* :hover 반응선택자는 움직이지않는 것에 적용. 움직이는 대상에 적용하면 튕김 */
+/* 눈대중이면, 생각과 다르게 적용됨 */
+
+
+
+/* .ex2_2 */
+
+.ex2_2{ width: 1080px; }
+
+.ex2_2 > div:nth-of-type(2){
+    text-align: center;
+    /* margin: auto 220px; */
+    margin: 90px 220px;}    
+.ex2_2 > div:nth-of-type(2) > h2 {width:615px; font-size: 50px; text-transform: uppercase; letter-spacing: 5px; }
+.ex2_2 > div:nth-of-type(2) > p {
+    font-size: 22px; padding: 45px; margin: 0; white-space:pre-line;}
+    /* box-sizing:border-box;} */
+
+.ex2_2 > div:nth-of-type(1) {position: relative; margin: 0;}
+.ex2_2 > div:nth-of-type(1) > p{margin: 0; }
+.ex2_2 > div:nth-of-type(1) > p > img{ width: 1040px; }
+.ex2_2 > div:nth-of-type(1) > div {width: 340px; height:175px;
+    background-color: #000; color: #fff;
+    text-align: center;
+    position: absolute;
+    /* left: calc(50% - 170px); top: calc(50% - 85px); */
+    left: calc(50% - 170px); bottom: 0;
+}
+.ex2_2 > div:nth-of-type(1) > div > b{ font-size: 96px;}
+.ex2_2 > div:nth-of-type(1) > div > p{ font-size: 16px; text-transform: uppercase; letter-spacing: 10px;
+box-sizing:border-box;}
+

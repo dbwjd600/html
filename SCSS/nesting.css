@@ -1,0 +1,167 @@
+html, body {
+  margin: 0;
+  font-size: 20px;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+header {
+  width: 1400px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+header nav a {
+  display: inline-block;
+}
+
+header nav a::after {
+  content: ' / ';
+  display: inline-block;
+  margin: 0 20px;
+}
+
+main .spot {
+  width: 1400px;
+  margin: 0 auto;
+}
+
+main .spot img {
+  width: 100%;
+}
+
+main .ex {
+  margin: 0 auto;
+  width: 1200px;
+  height: 785px;
+  background: url(./img/hero_2.jpg);
+  background-repeat: no-repeat;
+  color: #fff;
+}
+
+main .ex div {
+  text-align: center;
+}
+
+main .ex div h2 {
+  font-size: 30px;
+}
+
+main .ex div p {
+  font-size: 50px;
+  white-space: pre-line;
+}
+
+main .ex ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+main .ex ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+main .ex ul li div {
+  text-align: left;
+  line-height: 0;
+  margin: 20px 160px 0 10px;
+}
+
+main .ex ul li div span {
+  color: #ffd692;
+  font-size: 30px;
+}
+
+main .ex ul li div p {
+  font-size: 20px;
+}
+
+main .ex ul::before {
+  content: '';
+  display: block;
+  width: 1080px;
+  border-bottom: 1px solid #fff;
+}
+
+main .ex div:nth-child(1)::before {
+  content: url("img/Layer 1.png");
+  display: inline-block;
+}
+
+main .ex div:nth-child(2)::before {
+  content: url("img/Layer 2.png");
+  display: inline-block;
+}
+
+main .ex div:nth-child(3)::before {
+  content: url("img/Layer 3.png");
+  display: inline-block;
+}
+
+@media (min-width: 360px) and (max-width: 768px) {
+  body {
+    background-color: #f00;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  body {
+    background-color: #00f;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 3600px) {
+  body {
+    background-color: #0f0;
+  }
+}
+/*# sourceMappingURL=nesting.css.map */

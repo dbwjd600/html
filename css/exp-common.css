@@ -1,0 +1,145 @@
+@charset "utf-8";
+/* 무조건 가장 위에, 큰따옴표사용 */
+
+                            /* common.css */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400&family=Playfair+Display:wght@400;600&display=swap');
+/* font-family: 'Nunito Sans', sans-serif; */
+/* font-family: 'Playfair Display', serif; */
+
+html,body{margin: 0; font-size: 14px;}
+ul,li,ol{list-style-type: none; margin: 0; padding: 0;}
+h1,h2,h3,h4,p,figure{margin: 0;}
+a{text-decoration: none;}
+img{vertical-align: top;}
+
+*{
+    box-sizing: border-box;
+    font-size: 1rem;  /* html,body{margin: 0; font-size: 14px; 기준 ->> 14X1이 1rem */
+    line-height: 1.7; /* 14px X 1.7 = 23.8px */
+    color: #626262;
+    font-family: 'Playfair Display', serif;
+}
+
+h2{    /* 타이틀(글자크기 상관무) */
+    font-size: 1rem;
+    color: #b4ad9e;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 300;
+    margin-bottom: 60px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+}
+h2::after{ 
+    content: '';
+    display: block; 
+    width: 60px; 
+    border-bottom: 2px solid #000;
+    margin: 5px auto;
+}
+.txt-s1{}
+.txt-s1 > b{ font-size: 2.2rem;}
+.txt-s1 > p{ margin: 30px 0 50px;}
+.txt-s1 > a{
+    font-size: 1rem;
+    color: #b4ad9e;
+    font-family: 'Nunito Sans', sans-serif;
+    text-transform: uppercase;
+}
+
+h2{font-size: 2.2rem;}
+h3{
+    font-size: 1rem;
+    color: #b4ad9e;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 300;
+}
+    /* 
+        commom.css는 매 페이지에서 공통으로 사용할 세팅값을 위해 별도로 만들어놓은 것.
+            ex) 테이블, 레이어팝업, 버튼, 탭, 레이블, 컬러, 레이아웃(헤더,풋터,사이드콘텐츠)
+                (피그마에 Local components와 비슷함)
+        index.css에서는 콘텐츠밖에 없음.
+    */
+
+
+header{
+/* background-color: #b4ad9e; */
+    padding: 60px 0; /* 75px정도되는데 a태그에 15줬으니깐 60px. */
+}
+header > div{
+    width: 1060px; margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+header > div > h1{}
+header > div > h1 > a{}
+
+header > div > nav{}
+header > div > nav > ul{
+    display: flex;
+}
+header > div > nav > ul > li{
+    position: relative;
+}
+header > div > nav > ul > li > a{
+    display: inline-block; /* 여백을 주기위해 (a에게줌) */
+    padding: 15px 2.5vw; /* vw : 디바이스의 크기기준 */
+    text-transform: uppercase;
+}
+header > div > nav > ul > li > div{
+    position: absolute; 
+    left: 0; 
+    bottom: 0; transform: translateY(100%); /* <- top: 40px;는 눈대중이어서...*/
+    /* ↑↑ sub에따라 header의 크기가 바뀜, sub가 공중에 띄워져서 명령줘야함. */
+    width:100%; /* height: 200px; 없애도됨. */
+    background-color: #000;
+    padding: 20px;
+    /* display: none; */ opacity: 0; transition: 0.5s;
+    z-index: 1;
+}
+header > div > nav > ul > li > div > a{
+    display:block; color: #fff;
+    text-align: center;
+}
+
+header > div > nav > ul > li:hover div{ display: block;}
+    /* 이거도 가능은 함 ->> header > div > nav > ul > li > a:hover + div{ display: block;} */
+header > div > nav > ul > li:hover div{ opacity: 1;} /* text는 transition안됨 ? */
+
+
+/* common과 같이 작업하면 코드가 충돌이날수도 있음. */
+
+footer{
+    background-color: #eee; padding: 40px 0;
+}
+footer > div{
+    width: 1060px; margin: 0 auto;
+    display: flex; justify-content: space-between;
+}
+footer > div > p{}
+footer > div > p:nth-child(1) > a{ margin: 0 30px;}
+footer > div > p:nth-child(2) > span{
+    vertical-align: middle;
+    display: inline-block;
+    line-height: 1;
+}
+footer > div > p:nth-child(2) > span > a{
+    font-size: 0; width: 15px; height: 15px;
+    display: inline-block;
+    background: url(../img/btn_sns.png) no-repeat; /* background-image: url();하면 왜안되지?? */
+    /* (line-height: 1.7;-전체선택자에준명령)
+    inline요소(span태그)안에 inline-block(a태그)있는데 inline요소에 줄간격있었음 */
+    vertical-align: middle;
+}
+footer > div > p:nth-child(2) > span > a:nth-child(1){
+    background-position: 5px;
+}
+footer > div > p:nth-child(2) > span > a:nth-child(2){
+    background-position: -26px;
+}
+footer > div > p:nth-child(2) > span > a:nth-child(3){
+    background-position: -61px;
+}
+

@@ -1,0 +1,50 @@
+/* 1280
+50 / 50 좌우 */
+
+
+/* flex는 자식의크기를 자기영역안에 넣으려고함. 
+자기안에있는 컨텐츠크기만큼만 자식들을 설정.
+자식을 컨트롤함. */
+
+* { box-sizing: border-box; }
+body { margin: 0;}
+ul,li { margin: 0; padding: 0;}
+a {text-decoration: none;}
+
+.ex6-1 {
+    width: 1280px;
+    margin: 0 auto;
+    list-style-type: none;
+}
+
+.ex6-1>li {
+    display: flex;
+}
+
+.ex6-1>li>p {
+    width: 50%;
+}
+
+.ex6-1>li>p>img { width: 100%; }
+
+.ex6-1>li>article {
+    width: 50%;
+    text-align: start;
+    padding: 100px;
+}
+
+/* ::after는 float 세부속성(내용)인가? */
+.ex6-1>li>article>h2::after {
+    content: '';
+    border: 1px solid #000;
+    display: block;
+    transform: translate( 20% );
+}
+
+.ex6-1>li:nth-of-type(even)>p {
+    order: 2;
+}
+.ex6-1>li:nth-of-type(even)>article {
+    order: 1;
+}
+/* flex의 자식으로 -> order 사용 순서변경 */

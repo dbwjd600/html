@@ -1,0 +1,75 @@
+@import url(./exp3-common.css);
+
+.vita{}
+
+.vita > div{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.vita > div > div{
+    width: 70%; height: 100vh;
+    background-color: #ffd200;
+    float: right;
+    order: 1;
+}
+
+.vita > div > figure{
+    position: absolute;
+    left: 30%;
+}
+
+.vita > div > figure > p{
+    position: relative;
+}
+.vita > div > figure > p > img:nth-child(2){
+    position: absolute;
+    left: 0; bottom: 0;
+    transform: translate(-50%, 50%);
+}
+
+.vita article{ 
+    width: 70%;
+    position: absolute;
+    left: 50%;
+    color: #fff;
+}
+
+.vita article h2{
+    font-size: 74px;
+    text-transform: uppercase;
+    white-space: pre-line;
+}
+.vita article p{
+    font-size: 17.5px;
+    white-space: pre-line;
+    padding: 50px 0 87px;
+}
+.vita > div > p > a{
+    font-size: 15.5px;
+    display: inline-block;
+}
+
+.vita b{
+    position: absolute;
+    left:61px;
+    font-size: 40px;
+}
+.vita b::after{
+    content: '';
+    display: block;
+    height: 174px;
+    border-left: 2px solid #000;
+    transform: translate(50%);
+}
+.vita b::before{
+    content: '';
+    display: block;
+    height: 174px;
+    border-left: 2px solid #000;
+    transform: translate(50%);
+}
+

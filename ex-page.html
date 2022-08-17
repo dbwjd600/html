@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./css/exp-index.css" rel="stylesheet">
+</head>
+<body>
+<!-- 0518 -->
+
+<!-- 
+Q) header의 크기를 1200px or 1060px ?
+    gride확인 -> 1060안에 들어와야함 (실질적인 콘텐츠들! background말고)
+-->
+
+<header>
+    <div>
+        <h1><a href="#"><img src="./img/logo.gif" alt="minimo"></a></h1>
+        <nav>
+            <ul> <!-- a태그를 해도 되지만 :hover시 반응위해서 -->
+                <li> <!-- position 주기위해 (ul)li씀 (li에 relative, div에 absolute) -->
+                    <a href="#">lifestyle</a>
+                    <div> <!-- sub메뉴 - 마우스를 올리면 나올 메뉴 -->
+                        <a href="#">sub 01</a>
+                        <a href="#">sub 02</a>
+                        <a href="#">sub 03</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">photodiary</a>
+                    <div>
+                        <a href="#">sub 01</a>
+                        <a href="#">sub 02</a>
+                        <a href="#">sub 03</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">music</a>
+                    <div>
+                        <a href="#">sub 01</a>
+                        <a href="#">sub 02</a>
+                        <a href="#">sub 03</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">travel</a>
+                    <div>
+                        <a href="#">sub 01</a>
+                        <a href="#">sub 02</a>
+                        <a href="#">sub 03</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+    
+<main>
+    <figure class="visual">
+        <img src="./img/img_spot.jpg" alt="">
+        <figcaption>http://min-kyu.dothomet.co.kr</figcaption>
+    </figure>
+
+    <!-- 콘텐츠의 제목들은 되도록이면 html쓰지말기. -->
+
+    <section class="diary"> <!-- section태그는 규정이 제목태그 사용 -->
+        <h2>photodiary</h2>
+        <div class="txt-s1">
+            <b>The perfect weekend getaway</b>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+            <a href="#">Leave a comment</a>
+        </div>
+    </section>
+
+    
+    <section class="life"> 
+        <h2>lifestyle</h2>
+        <ul>
+            <li>
+                <figure> <img src="img/img_01.jpg"></figure>
+                <div class="txt-s1">
+                    <b>More than just a music festival </b>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
+                    <a href="#">Leave a comment</a>
+                </div>
+            </li>
+            <li>
+                <figure> <img src="img/img_01.jpg"></figure>
+                <div class="txt-s1">
+                    <b>More than just a music festival </b>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
+                    <a href="#">Leave a comment</a>
+                </div>
+            </li>
+            <li>
+                <figure> <img src="img/img_01.jpg"></figure>
+                <div class="txt-s1">
+                    <b>More than just a music festival </b>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
+                    <a href="#">Leave a comment</a>
+                </div>
+            </li>
+            <li>
+                <figure> <img src="img/img_01.jpg"></figure>
+                <div class="txt-s1">
+                    <b>More than just a music festival </b>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
+                    <a href="#">Leave a comment</a>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <section class="email">
+        <h3>Sign up for our newsletter!</h3>
+        <p>
+            <input type="email" >
+            <a href="#">보내기</a> <!-- '보내기'가없으면 코드만봐서는 모르기 때문에 적음 (font-size:0;처리하면됨)-->
+        </p>
+    </section>
+</main>
+
+<footer>
+    <div>
+        <P>  <!-- div써도되는데 이미div로 묶어서 p사용 -->
+            <a href="#">Terms and conditions</a>
+            <a href="#">Privacy</a>
+        </P>
+        <p>
+            <span>Follow</span>
+            <span>
+                <a href="#">facebook</a>
+                <a href="#">twitter</a>
+                <a href="#">instagram</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+
+
+
+</body>
+</html>

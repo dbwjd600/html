@@ -1,0 +1,101 @@
+div {
+    width: 1920px;
+    /* ↑ width: 100%; 사용하면됨 */
+    position: relative;
+}
+
+div>h2 {
+    width: 100%;
+    font-size: 48px;
+    text-align: center;
+    margin: 170px 0;
+}
+
+div > a {
+    width: 300px; height: 60px;
+    background-color: black;
+    border-radius: 5%;
+    color: white;
+    display: inline-block;
+    /* display:block은 줄내리기효과 때문에 버튼여러개 형성될시, 밑으로 내려감. */
+    padding: 30px, 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: calc(50% - 150px);
+}
+/* 
+dispaly가 block으로만들어주는지
+a아닌p를쓰면버튼만적용안되는지
+전체1000px일때, li한테 500px -> li나머지자식 100%이면 500px ? >> 맞음
+★인라인은 width사이즈아닌, 콘텐츠크기만큼 가져버림.
+ */
+
+div>ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div>ul>li {
+    width: 500px;
+    position: relative;
+}
+
+div>ul>li>p {
+    width: 100%;
+    vertical-align: middle;
+}
+
+div>ul div:nth-of-type(1) {
+    width: 100px;
+    background-color: #ff6600;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    color: white;
+    opacity: 0 ; 
+}
+
+div>ul div:nth-of-type(1)>b {
+    font-size: 28px;
+}
+
+div>ul div:nth-of-type(1)>p {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+div>ul p>img {
+    opacity: 0;
+    width: 100%;
+}
+
+div>ul div:nth-of-type(2) {
+    width: 100%;
+    white-space: pre-line;
+    text-align: center;
+}
+
+div>ul div:nth-of-type(2)>b {
+    font-size: 24px;
+    padding-bottom: 20px;
+}
+
+div>ul div:nth-of-type(2)>p {
+    font-size: 16px;
+}
+
+
+div>ul p>img:hover {
+    opacity: 1;
+}
+div>ul >li:hover>div:nth-of-type(1) {
+    opacity: 1 ;
+}

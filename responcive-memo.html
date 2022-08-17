@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="" rel="stylesheet">
+</head>
+<body>
+    <!-- index.html -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-6 ">01</div>
+            <div class="col-md-4 col-sm-6 ">02</div>
+            <div class="col-md-4 col-sm-6 ">03</div>
+        </div>
+
+    </div>
+
+    <style>
+        .row > div{
+            border: 1px solid #000;
+            padding: 60px;
+        }
+
+/* 
+            [ 모바일 ] 
+        @media (max-wdith:767px) {}
+            [ ipad ] 
+        @media (min-width:768px) and (max-width:1023px) {}
+            [ desktop ] 
+        @media (min-width:1024px) and (max-width:1400px) {} 
+*/
+
+
+        /* 타블렛,아이패드(가로세로변형) */
+        /* break point점 (밑에있는값이 우선순위)  */
+        @media (min-width:768px){ body{ background-color: #00f;}}
+        @media (min-width:992px){ body{ background-color: #0f0;}}
+        @media (min-width:1200px){
+            body{ background-color: #f00;}}
+
+        /* 모바일 */
+        @media (min-width:767px){ body{ background-color: #000;}}
+
+
+
+    </style>
+    
+</body>
+</html>

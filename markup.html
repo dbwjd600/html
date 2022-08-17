@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./css/markup.css" rel="stylesheet">
+<!-- <style> a {border: 10px 10px #000;} </style> -->
+</head>
+<body>
+<!-- 0503 -->
+
+<!-- markup.html -->
+
+
+<!-- 예제1 (내가한거 - 강사님) -->
+    <!-- 
+        <article>
+            <h1> Precise Created <br>
+                Only For You
+            </h1>
+            <p>
+                is you are looking at blank casttdon onther wle.
+                dolr
+            <p>ipum</p> an daim. concleru apliciton amd de eislfk ienpor
+            inter dlskja;dlfkdjf lwalrdls.
+            </p>
+            <div>
+                <h1> Get Started </h1>
+            </div>
+        </article> 
+    -->
+
+    <div class="ex-1">
+        <h2>
+            Precise Created
+            Only For you
+        </h2>
+        <p>
+            If <span>dolor</span>
+            cassets on the...
+        </p>
+        <a href="#"> Get started</a>
+    </div><br>
+
+<!-- 예제2 -->
+    <!-- 
+        <div>
+            <img src="이미지url" alt="#">
+            <h2>Precise Created Only For YOU</h2>
+            <p>if you are looking at blank ...</p>
+            <a href="#" target="_blank">Get Started</a>
+        </div><br> 
+    -->
+
+    <div class="ex-2">
+        <p><img src="../0506/01.jpg" alt="#"></p>
+        <div>
+            <b>
+                Precise Created
+                Only For YOU
+            </b>
+            <p>
+                if you ...
+            </p>
+            <a href="#">get started</a>
+        </div>
+    </div><br>
+    <!-- 
+    섬네일은 혼자나오지 않고 여러개 반복되기 때문에 제목이라기보다는
+    진하고 큰 글씨(섬네일의제목)이기때문에 h2가아닌, b로 묶음. -->
+    <!-- 
+    img태그를 p태그로 묶는 이유
+        : 이미지가 커질 때 영역은 커지지 않도록 하기위함.-->
+
+<!-- 예제3 -->
+<!-- <div>
+        <b>
+            Precise Created Only For You
+        </b>
+        <p><img src="이미지url" alt="#"></p>
+        <p>if you are looking at blank ...</p>
+        <a href="#"> Get Started</a>
+    </div><br> 
+-->
+
+<div>
+    <h2>Precise Created Only For You</h2>
+    <div>
+        <p><img src="이미지url" alt="#"></p>
+        <div>
+            <p>
+                if you are looking at blank ...
+            </p>
+            <a style="background-color:yellow; border:1;" 
+            href="#">Get Started</a>
+        </div>
+    </div>
+</div>
+
+<!-- 예제4 -->
+    <!-- <div>
+            <p><img src="이미지url" alt="#"></p>
+            <div>
+                <b>
+                    Precise Created Only For You
+                </b>
+                <p>
+                    if you are looking at blank ...
+                </p>
+                <a href="#"> Get Started</a>
+            </div>
+        </div> 
+    -->
+
+<div>
+    <p><img src="url" alt="#"></p>
+    <div>
+        <h2>Precise Created Only For You</h2>
+        <p>if you are looking at blank ...</p>
+        <a href="#"> Get Started</a>
+    </div>
+</div>
+<!-- 세로 콘텐츠와 가로 콘텐츠랑 똑같음
+스타일명령이 들어가는게 다를 뿐. -->
+
+<!-- 예제5 -->
+    <!-- <div>
+            <h2> Ingredients </h2>
+            <ul>
+                <li>
+                    <img src="url" alt="#">
+                    <p> 6 nov 2021 / ingerdienmt</p>
+                    <b> Extebrri</b>
+                </li>
+                <li>
+                    <img src="url" alt="#">
+                    <p> 6 nov 2021 / ingerdienmt</p>
+                    <b> Antonio Restarunt</b>
+                </li>
+                <li>
+                    <img src="url" alt="#">
+                    <p> 6 nov 2021 / ingerdienmt</p>
+                    <b> Los Marino Jose</b>
+                </li>
+            </ul>
+        </div> -->
+
+<div>
+    <h2> Ingredients </h2>
+    <ul>
+        <li>
+            <p><img src="url" alt="#"></p>
+            <div>
+                <p> 6 nov 2021 / ingerdienmt</p>
+                <b> Extebrri</b>
+            </div>
+        </li>
+        <li>
+            <p><img src="url" alt="#"></p>
+            <div>
+                <p> 6 nov 2021 / ingerdienmt</p>
+                <b> Antonio Restarunt</b>
+            </div>
+        </li>
+        <li>
+            <p><img src="url" alt="#"></p>
+            <div>
+                <p> 6 nov 2021 / ingerdienmt</p>
+                <b> Los Marino Jose</b>
+            </div>
+        </li>
+    </ul>
+</div>
+<!-- 형제요소가 두개 이상이면, 부모로 묶음. -->
+
+
+
+<!-- 상대경로 & 절대경로 -->
+
+    [상대경로]
+        ㄴ 현재폴더(./)
+        ㄴ 상위폴더(../)
+        ㄴ 경로를 작성하는 파일기준
+
+        ./ - 해당파일 (같은 위치-그냥 이름씀)
+        ../ - 상위폴더
+        ../../ - 상위>상위폴더
+        / - 하위폴더로
+
+
+    [절대경로]
+        ㄴ 루트(root) - /
+        ㄴ 시스템경로 - f://
+        ㄴ 프로토콜 - http://
+        ㄴ 페이지나 파일이 가지고 있는 고유한 경로
+        ㄴ 호출하는 문서의 위치 상관없음
+
+            내컴퓨터 위치에서부터 해당파일까지 시스템경로
+        full경로:시스템경로
+            F:/차민규/UIUX웹디자인&웹퍼블리셔/HTML ()
+            (링크를검↓)
+            http://naver.com 도메인경로
+
+        ex)이미지주소복사 (절대경로에서 바뀌면 자동바뀜)
+        <img src="https://www.dbcut.com/bbs/bbs/table/newsite/upload/thumb_2022-05-0212-53-37.png" alt="#">
+    
+        / (루트)
+        폴더열기 > 시작폴더 안에서 이동(접근)가능.
+        시작폴더가 중요! 시작폴더를 상위하는 폴더는 없는거임.
+        <img src="/IMG_3231.jpg" alt="#">
+
+
+</body>
+
+</html>

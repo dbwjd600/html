@@ -1,0 +1,72 @@
+*{box-sizing: border-box;}
+p,h2{margin:0; padding: 0;}
+a{text-decoration: none;}
+
+
+.ct2 {
+    position: relative;
+}
+
+.ct2 > div {
+    position: relative;
+}
+.ct2 > div > figure{
+
+}
+.ct2 > div > figure > img{ width: 100%; vertical-align: middle;}
+.ct2 > div > div{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+
+    position: absolute;
+
+    font-size: 30px;
+
+    margin: 0 auto;
+}
+
+.ct2 > div > div > a{
+    color: #fff;
+
+}
+.ct2 > div > div > a:nth-of-type(1){
+    display: flex;
+    flex-direction: column;
+
+}
+.ct2 > div > div > a:nth-of-type(1) > span:nth-of-type(1){}
+.ct2 > div > div > a:nth-of-type(1) > span:nth-of-type(2){}
+.ct2 > div > div > a:nth-of-type(1) > span:nth-of-type(3){}
+.ct2 > div > div > a:nth-of-type(2){}
+.ct2 > div > div > a:nth-of-type(3){}
+
+.ct2 > div > div > a > span::after{
+    content: '';
+    border-bottom: #fff;
+    display: inline-block;
+}
+
+.ct2 > article{
+    position: absolute;
+    left: 50%; bottom:50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.ct2 > article > h2{
+    font-size: 80px; color: #ff0;
+    margin-bottom: 10%;
+}
+.ct2 > article > a{
+    display: inline-block;
+    padding: 10px 50px;
+    border: 1px solid #fff;
+    color: #fff;
+}
+.ct2 > a{
+    position: absolute;
+    left: 50%; bottom: 5%;
+}
+.ct2 > a > img{width: 100%;}

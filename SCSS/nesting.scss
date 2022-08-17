@@ -1,0 +1,120 @@
+@import "_common";
+
+// nesting.scss
+
+header{
+    width: $pageWidth;
+    margin: 0 auto;
+    @include flex(space-between, center, nowrap, row);
+    
+    h1{
+    }
+    nav{
+        a{
+            display: inline-block;
+            // margin: 0 20px;
+            &::after{
+                content: ' / ';
+                display: inline-block;
+                margin: 0 20px;
+            }
+        }
+    }
+}
+
+main{
+    .spot{
+        width: $pageWidth;
+        margin: 0 auto;
+
+        img{width: 100%;}
+    }
+    .ex{
+        margin: 0 auto;
+        width: 1200px; height: 785px;
+        background: url(./img/hero_2.jpg);
+        background-repeat: no-repeat;
+        color:#fff;
+
+        div{
+            text-align: center;
+            
+            h2{font-size: 30px;}
+            p{font-size:50px;
+            white-space: pre-line;}
+        }
+        ul{
+        @include flex(center, center, nowrap, row);
+            li{ 
+                @include flex(center, center, nowrap, row);
+                
+                div{
+                    text-align: left;
+                    line-height: 0;
+                    margin: 20px 160px 0 10px;
+                    span{
+                        color: #ffd692;
+                        font-size: 30px;
+                    }
+                    p{font-size:20px;}
+                }
+            }
+            &::before{
+                content: '';
+                display: block;
+                width: 1080px;
+                border-bottom: 1px solid #fff;
+            }
+        }
+
+        $num : (1, 2, 3);
+        @each $i in $num{
+            div:nth-child(#{$i})::before{
+                      //   ↑문자보관
+                content:url('img/Layer\ #{$i}.png');
+                display: inline-block;
+            }
+        }
+    }
+}
+
+@import "_media";
+// @import는 호이스팅이되지않음 호출된곳에 코드생성
+
+
+
+// 전처리기, 스크립트언어
+
+// $(변수선언)
+
+// $변수이름 : 값;
+// $변수이름 : (값1, 값2);
+// $변수이름 : (속성:값1, 속성:값2);
+
+// ex) width: $변수이름;
+
+// ------------------------------
+
+// 함수정의
+// @mixin 이름(){
+//     실행명령
+// }
+//    ↓
+// 함수호출
+// @include 이름();
+
+// ------------------------------
+
+// 반복문
+// $정의된 변수 : (1,2,3);
+
+// @each $전달받을변수 in $정의된 변수{
+//     실행명령
+// }
+
+// *자바는 배열($정의된 변수)로 반복문(each문) 돌림
+
+// -------------------------------
+
+// &(nesting문법안에서 상위 셀렉터)
+// #{변수} 문자보관(문자와 변수 결합)

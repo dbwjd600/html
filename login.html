@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./css/login.css" rel="stylesheet">
+</head>
+<body>
+<!-- 0513 (ex7) -->
+
+<div class="login">
+    <fieldset>
+        <legend></legend>
+        <form>
+            <ul>
+                <li>
+                    <label for="id">아이디</label>
+                    <input type="text" name="id" id="id" placeholder="아이디">
+                </li>
+                <li>
+                    <label>패스워드</label>
+                    <input type="password" placeholder="비밀번호">
+                </li>
+            </ul>
+        </form>
+        <div class="btn">
+            <input type="checkbox" id="btn">
+            <label for="btn"><span></span></label>
+            <p>로그인 상태 유지</p>
+        </div>
+        <a href="#">로그인</a>
+    </fieldset>
+</div>
+
+<!-- 
+/ ul쓸 필요없이X ↓ /
+    <p>
+        <input>
+        <input>
+    </p>
+: input은 인라인요소
+-->
+
+    <div class="login">
+        <form>
+            <p>
+                <input type="text">
+                <input type="text">
+            </p>
+            <p>
+                <input type="checkbox">
+                <label><span></span></label>
+                <span>로그인 상태 유지</span>
+            </p>
+            <p>
+                <input type="submit">
+            </p>
+        </form>
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+html,body{margin: 0;}
+h1,h2,p,figure{margin: 0;}
+img{vertical-align: middle;}
+a{text-decoration: none;}
+*{box-sizing: border-box;}
+
+/* 
+header로 묶는데 div를 왜쓰지? 
+    앞으로 div컨텐츠가 더 추가될 수 있기 때문
+    유지보수를 수월하게 하기 위함.
+*/
+
+        /* header */
+.header > div{
+    width: 1200px;
+    position: relative;
+    display: flex;
+    margin: 30px 0;
+}
+.header > div > h1{ 
+    margin: 0 100px;
+    justify-content: flex-start;
+}
+.header > div > nav{
+    margin: 10px;
+    position: absolute;
+    right: 0; top: 0;
+}
+.header > div > nav > a {
+    padding: 0 10px;
+    display: inline-block;
+}
+
+.header > div > nav > a::after{
+    content: '';
+    border-bottom: 3px solid #000;
+    display: block;
+    width: 0%;
+    transition: .5s;
+    margin: 0 auto;
+}   /*  ::after는 인라인요소!  */
+
+/* .header > div > nav:hover > a::after{
+    opacity: 1;} */
+.header > div > nav > a:hover::after{
+    width: 100%;}
+
+
+        /* main */
+.main{ position: relative;}
+.main > img{ width: 100%;}
+.main > article{
+    position: absolute;
+    left: 50%; bottom: 0;
+    transform: translate(-50%, 0%);
+    border: 1px solid #000;
+    background-color: white;
+    padding: 60px;
+    transition: .5s;
+}
+/* article은 wdith사이즈 넣지 않고 좌우 padding값 사용 */
+.main > article > h2{
+    
+}
+.main > article > figure{
+
+}
+.main > article > figure > p > img{
+    width: 100%; margin: 10px;
+}
+
+.main > article > figure > figcaption {
+    text-align: center;
+}
+.main > article > figure > figcaption > p{
+    margin: 30px auto;
+}
+.main > article > figure > figcaption > a{
+    background-color: #ddd;
+    display: inline;
+    padding: 10px 30px;
+}
+
+.main:hover > article {
+    transform: translate(-50%, -10%);
+}
+/* article한테 :hover를 주면 커서가 밑에 있을 때, 움직임이 이상해짐. */

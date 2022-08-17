@@ -1,0 +1,64 @@
+
+/* 
+클래스는 '이름'이 있기때문에 '>'부등호(자식후손) 필요없음 
+*/
+/* 
+article.n-e div.content{}
+    클래스명앞에 태그이름 붙이기.(띄어쓰기 안쓰고 앞에태그 붙여도됨)
+    css문서(스타일명령)만 봐도 알수있음.
+    하지만, 길어져서 생략. 
+*/
+/* 
+width:100%
+padding: 100px 180px;
+box-sizing: border-box; 
+    padding값 때문에 width사이즈 커짐 -> box-sizing사용
+*/
+
+body{margin: 0;}
+p, figure, h2{margin: 0;}
+ul, li{list-style-type: none; margin: 0; padding: 0;}
+*{box-sizing: border-box;}
+
+.n-e{
+    width: 100%;
+    padding: 100px 180px;
+    text-align: center;
+}
+.n-e > h2{
+    font-size: 54px; color: black;
+}
+.n-e > p{ color: black;}
+
+.n-e .content{}
+.n-e .content > ul{
+    display: flex;
+    justify-content: space-between;
+}
+.n-e .content > ul > li{ width: 32%;}
+.n-e .content > ul > li > figure{
+    position: relative;
+    border-radius: 30px;
+
+    overflow: hidden;
+}
+.n-e .content > ul > li > figure > img{width: 100%;}
+.n-e .content > ul > li > figure > figcaption{
+    background-color: #f00;
+    position: absolute; left: 0; top: 0;
+    width: 80px; height: 80px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.n-e .content > ul > li > div{}
+.n-e .content > ul > li > div > b{}
+.n-e .content > ul > li > div > p{}
+
+.n-e .content .btn{}
+.n-e .content .btn > a{}
+
+
